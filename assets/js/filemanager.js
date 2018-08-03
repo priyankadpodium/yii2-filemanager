@@ -137,7 +137,10 @@ var gridBox = function () {
 
             if (modal){
             	ajaxUrl = $selectedTab.data('url');
-            	ajaxUrl = ajaxUrl.substring(0, ajaxUrl.indexOf('?'));
+                var ajaxSubUrl = ajaxUrl.substring(0, ajaxUrl.indexOf('?'));
+                if(ajaxSubUrl){
+                    ajaxUrl = ajaxSubUrl;
+                }
             } else {
             	ajaxUrl = $selectedTab.data('url');
             }
